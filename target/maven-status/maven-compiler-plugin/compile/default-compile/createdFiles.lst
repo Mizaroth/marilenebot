@@ -1,0 +1,6 @@
+com\marilene\main\Main.class
+com\marilene\constants\ReactionConstants.class
+com\marilene\utils\RNGHandler.class
+com\marilene\utils\ReplyDispatcher.class
+com\marilene\bots\MarileneBot.class
+com\marilene\constants\MarileneBotConstants.class
