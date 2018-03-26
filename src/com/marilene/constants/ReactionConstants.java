@@ -10,9 +10,9 @@ public interface ReactionConstants {
 	String ANIME = "ANIME";
 	String LOLI = "LOLI";
 	String[] ANIME_REPLY = {
-			"bho alla fine 2d è meglio di 3d",
-			"non ce niente di male a volere una waifu, è naturale",
-			"angel beats è tipo interstellar.. non so se l'avete visto ma lo dovete guardare\nhttps://www.youtube.com/watch?v=zIFV8UUs1-c"
+			"bho alla fine 2d e' meglio di 3d",
+			"non ce niente di male a volere una waifu, e' naturale",
+			"angel beats e' tipo interstellar.. non so se l'avete visto ma lo dovete guardare\nhttps://www.youtube.com/watch?v=zIFV8UUs1-c"
 	};
 	
 	String MARILENE = "MARILENE";

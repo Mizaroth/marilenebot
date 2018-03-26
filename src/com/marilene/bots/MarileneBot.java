@@ -25,9 +25,13 @@ public class MarileneBot extends TelegramLongPollingBot {
 
 				Long chatId = update.getMessage().getChatId();
 				User userFrom = update.getMessage().getFrom();
-				String from = userFrom.getFirstName() + " '" + userFrom.getUserName() + "'" + ((userFrom.getLastName() != null) ? (" " + userFrom.getLastName()) : "") ;
+				
+				String from = null;
+				
+				if(userFrom != null)
+					from = userFrom.getFirstName() + " '" + userFrom.getUserName() + "'" + ((userFrom.getLastName() != null) ? (" " + userFrom.getLastName()) : "") ;
 
-				if(userFrom.getUserName().equals("Mizaroth") && update.getMessage().getChat().getTitle() == null) {
+				if(userFrom != null && "Mizaroth".equals(userFrom.getUserName()) && update.getMessage().getChat() != null && update.getMessage().getChat().getTitle() == null) {
 					if(update.getMessage().hasPhoto()) {
 						SendPhoto sp = new SendPhoto();
 						sp.setPhoto(update.getMessage().getPhoto().get(0).getFileId());
@@ -116,7 +120,7 @@ public class MarileneBot extends TelegramLongPollingBot {
 				}
 				
 				if(actionPerformed) {
-					System.out.println("Triggered by: " + from + " | Chat: " + ((update.getMessage().getChat().getTitle() != null) ? update.getMessage().getChat().getTitle() : "Private Chat" ) + " @ " + Calendar.getInstance().getTime().toString());
+					System.out.println("Triggered by: " + from + " | Chat: " + ((update.getMessage().getChat() != null && update.getMessage().getChat().getTitle() != null) ? update.getMessage().getChat().getTitle() : "Private Chat" ) + " @ " + Calendar.getInstance().getTime().toString());
 				}
 
 			}

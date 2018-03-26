@@ -13,6 +13,8 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
+		System.out.println("File Encoding: " + System.getProperty("file.encoding"));
+		
         ApiContextInitializer.init();
 
         TelegramBotsApi botsApi = new TelegramBotsApi();
